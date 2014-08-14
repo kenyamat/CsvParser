@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <package>
   <metadata>
-    <id>CsvParser</id>
+    <id>CsvParser.NET</id>
     <title>$title$</title>
     <version>$version$</version>
     <authors>kenyamat</authors>

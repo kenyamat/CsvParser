@@ -3,11 +3,11 @@ using System.Reflection;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("CsvParser")]
+[assembly: AssemblyTitle("CsvParser.NET")]
 [assembly: AssemblyDescription("CSV Praser")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("CsvParser")]
+[assembly: AssemblyProduct("CsvParser.NET")]
 [assembly: AssemblyCopyright("Copyright (c) kenyamat 2014")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
