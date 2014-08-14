@@ -1,0 +1,11 @@
+CsvParser.sln.DotSettings.user
+CsvParser.suo
+CsvParser.v12.suo
+packages/*
+src/*/bin/*
+src/*/obj/*
+tests/*/bin/*
+tests/*/obj/*
+samples/*/bin/*
+samples/*/obj/*
+TestResults/*
