@@ -254,7 +254,7 @@ namespace Csv
         /// <returns>next letter</returns>
         private char GetNextLetter()
         {
-            return this.csv.Length > this.currentPosition + 1 ? this.csv[this.currentPosition + 1] : '\0';
+            return this.csv[this.currentPosition + 1];
         }
     }
 }
