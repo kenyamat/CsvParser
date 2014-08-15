@@ -1,13 +1,13 @@
-namespace Csv.Tests
+namespace CsvParser.Tests
 {
     using System;
     using System.Collections.Generic;
     using System.Linq;
-    using Csv;
+    using CsvParser;
     using Microsoft.VisualStudio.TestTools.UnitTesting;
 
     [TestClass]
-    public class CsvParserTests
+    public class ParserTests
     {
         [TestMethod]
         public void TestParse()
@@ -16,7 +16,7 @@ namespace Csv.Tests
             const string Csv = "Header,Arrange,,Assertion,";
 
             // Act
-            var result = new CsvParser().Parse(Csv);
+            var result = new Parser().Parse(Csv);
 
             // Assert
             Assert.AreEqual(1, result.Count());
@@ -32,7 +32,7 @@ namespace Csv.Tests
         public void TestParseWithNullCsv()
         {
             // Act
-            new CsvParser().Parse(null);
+            new Parser().Parse(null);
         }
 
         [TestMethod]
@@ -42,7 +42,7 @@ namespace Csv.Tests
             const string Csv = "\"H\"\"e,ader\",Arrange,,Assertion,aa\"\n";
 
             // Act
-            var result = new CsvParser().Parse(Csv);
+            var result = new Parser().Parse(Csv);
 
             // Assert
             Assert.AreEqual(1, result.Count());
@@ -62,7 +62,7 @@ namespace Csv.Tests
                 ",Data1,Data2,\r\n";
 
             // Act
-            var result = new CsvParser().Parse(Csv);
+            var result = new Parser().Parse(Csv);
 
             // Assert
             Assert.AreEqual(2, result.Count());
@@ -91,7 +91,7 @@ namespace Csv.Tests
                 ",Data1,Data2,\r\n";
 
             // Act
-            var result = new CsvParser().Parse(Csv);
+            var result = new Parser().Parse(Csv);
 
             // Assert
             Assert.AreEqual(2, result.Count());
@@ -125,7 +125,7 @@ namespace Csv.Tests
             };
 
             // Act
-            CsvParser.MakeAllOfColumnmLength(data, 3);
+            Parser.MakeAllOfColumnmLength(data, 3);
 
             // Assert
             foreach (var row in data)
@@ -141,7 +141,7 @@ namespace Csv.Tests
             const string Csv =
                 "Header,Arrange,,\"Assertion\"\r\n" +
                 "SKIP,Data1,Data2,\r\n";
-            var parser = new CsvParser();
+            var parser = new Parser();
             parser.SkipKeyWords.Add("SKIP");
 
             // Act
@@ -166,7 +166,7 @@ namespace Csv.Tests
             const string Csv =
                 "Header,Arrange,,\"Assertion\"\r\n" +
                 "SKIP,Data1,Data2,\r\n";
-            var parser = new CsvParser();
+            var parser = new Parser();
             parser.SkipKeyWords.Add("SKIP2");
 
             // Act
@@ -192,7 +192,7 @@ namespace Csv.Tests
                 "Header,Arrange,,\"Assertion\"\r\n" +
                 "\r\n" +
                 ",Data1,\"Data2\",";
-            var parser = new CsvParser();
+            var parser = new Parser();
             parser.SkipEmptyRow = true;
 
             // Act
@@ -219,7 +219,7 @@ namespace Csv.Tests
                 ",Data1,Data2,\r\n";
 
             // Act
-            var parser = new CsvParser();
+            var parser = new Parser();
             parser.MinColumnCount = 10;
             var result = parser.Parse(Csv);
 
@@ -251,7 +251,7 @@ namespace Csv.Tests
                 ",Data1,Data2\"";
 
             // Act
-            var parser = new CsvParser();
+            var parser = new Parser();
             var result = parser.Parse(Csv);
 
 
@@ -277,7 +277,7 @@ namespace Csv.Tests
         public void TestBlankLetter()
         {
             // Arrange
-            var parser = new CsvParser();
+            var parser = new Parser();
 
             // Act
             parser.BlankLetter = " ";
@@ -290,7 +290,7 @@ namespace Csv.Tests
         public void TestSkipKeyWords()
         {
             // Arrange
-            var parser = new CsvParser();
+            var parser = new Parser();
 
             // Act
             parser.SkipKeyWords.Add("a");

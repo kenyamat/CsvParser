@@ -6,7 +6,7 @@
     <ProjectGuid>{F93589A2-E621-4CBA-B57A-B4D8F3AC126E}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Csv.Tests</RootNamespace>
+    <RootNamespace>CsvParser.Tests</RootNamespace>
     <AssemblyName>CsvParser.Tests</AssemblyName>
     <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
@@ -60,7 +60,7 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
-    <Compile Include="CsvParserTests.cs" />
+    <Compile Include="ParserTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
