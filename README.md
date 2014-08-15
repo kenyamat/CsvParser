@@ -2,7 +2,7 @@
 CSV parser library for .NET
 
 ```
-CsvParser parser = new CsvParser();
+CsvParser.Parser parser = new CsvParser.Parser();
 List<List<string>> result = parser.Parse("a,b,c");
 string v1 = result[0][0]; // "a"
 ```
@@ -20,7 +20,7 @@ string v1 = result[0][0]; // "a"
 |<b>abc,def</b>|&nbsp;|&nbsp;|
 
 ```
-CsvParser parser = new CsvParser();
+CsvParser.Parser parser = new CsvParser.Parser();
 List<List<string>> result = parser.Parse("\"hello world\",123,456\n" +
                                          "\"abc,def\"");
 int rowCount = result.Count; //-> 2
@@ -35,7 +35,7 @@ string v2 = result[0][1]; //-> "123"
 |<b>abc</b>|<b>def</b>|&nbsp;|
 
 ```
-CsvParser parser = new CsvParser();
+CsvParser.Parser parser = new CsvParser.Parser();
 List<List<string>> result = parser.Parse("\"hello\n" +
                                          "world\","12,3",456\n" +
                                          "abc,def");
@@ -51,7 +51,7 @@ string v2 = result[0][1]; //-> "12,3"
 |REM|<b>def</b>|<b>ghi</b>|
 
 ```
-CsvParser parser = new CsvParser();
+CsvParser.Parser parser = new CsvParser.Parser();
 parser.SkipKeyWord.Add("REM");
 List<List<string>> result = parser.Parse("\"hello world\","123",456\n" +                                      
                                          "REM,def,ghi");

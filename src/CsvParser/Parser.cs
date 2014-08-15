@@ -1,4 +1,4 @@
-namespace Csv
+namespace CsvParser
 {
     using System;
     using System.Collections.Generic;
@@ -8,7 +8,7 @@ namespace Csv
     /// <summary>
     /// Csv Parser class
     /// </summary>
-    public class CsvParser
+    public class Parser
     {
         /// <summary>Return code</summary>
         private const string ReturnCode = "\n";

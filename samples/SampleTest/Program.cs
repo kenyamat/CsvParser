@@ -1,14 +1,14 @@
-﻿namespace Csv.Sample
+﻿namespace CsvParser.Sample
 {
     using System.Collections.Generic;
     using System.Diagnostics;
-    using Csv;
+    using CsvParser;
 
     class Program
     {
         public static void Main(string[] args)
         {
-            CsvParser parser = new CsvParser();
+            Parser parser = new Parser();
             List<List<string>> result;
             
             // single line
